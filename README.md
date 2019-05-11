@@ -63,6 +63,16 @@ ipfs daemon
 ipfs id
 ``` 
 
+### To configure CORS:
+
+####Stop IPFS daemon with ctrl-c
+```
+ipfs config -- json API.HTTPHeaders.Access-Control-Allow-Methods ‘[“PUT”, “GET”, “POST”, “OPTIONS”]’
+ipfs config — json API.HTTPHeaders.Access-Control-Allow-Origin ‘[“*”]’
+ipfs daemon
+```
+
+
 ### Get list of peers
 ```
 ipfs swarm peers
